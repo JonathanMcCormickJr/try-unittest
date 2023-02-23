@@ -2,6 +2,10 @@ import unittest
 
 class MyFirstPythonTest(unittest.TestCase):
     def test_function_0(self):
+        # Arrange
+        # Act
+        # Assert
+        
         pass
 
     def test_function_1(self):
