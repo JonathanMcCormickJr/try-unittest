@@ -1,12 +1,25 @@
 import unittest
 
-class MyFirstPythonTest(unittest.TestCase):
-    def test_function_0(self):
-        # Arrange
-        # Act
-        # Assert
+def divide_by_7(a):
+    return a / 7
+
+class TestDivideBy7(unittest.TestCase):
+    # Arrange
+    def setUp(self):
+        print("SETUP has been CALLED...")
+        self.a = 259
+
+    def tearDown(self):
+        print("TEARDOWN has been CALLED...")
+        self.a = 0
         
-        pass
+    
+    def test_function_0(self):
+        print("test_function_0(self) has been CALLED")
+        # Act
+        result = divide_by_7(self.a)
+        # Assert
+        self.assertEqual(result, self.a/7)
 
     def test_function_1(self):
         pass
